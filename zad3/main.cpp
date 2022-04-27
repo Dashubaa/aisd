@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+
 void Merge(int *A, int first, int last) {
     int middle, start, final, j;
     int *mas = new int[100000000];
@@ -27,20 +28,19 @@ void MergeSort(int *A, int first, int last) {
     }
 }
 int main() {
-    setlocale(LC_ALL, "Rus");
-    int i, n;
-    int *A = new int[n];
+    int n;
     cout << "Size of array:\n ";
     cin >> n;
-    for (i = 1; i <= n; i++) {
+    int *A = new int[n];
+    for (int i = 0; i < n; i++) {
         A[i] = rand() % 10;
-        cout << A[i] << " ";
+        //cout << A[i] << " ";
     }
     cout << endl;
     MergeSort(A, 1, n);
-    cout << "Sorted array:\n ";
-    for (i = 1; i <= n; i++) {
+    /*cout << "Sorted array:\n ";
+    for (int i = 0; i < n; i++) {
         cout << A[i] << " ";
-    }
+    }*/
     return 0;
 }
